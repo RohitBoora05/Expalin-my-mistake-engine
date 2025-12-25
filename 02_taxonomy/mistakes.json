@@ -1,0 +1,602 @@
+{
+  "version": "1.0",
+  "description": "Cognitive Mistake Taxonomy for the Explain-My-Mistake Engine. This file contains descriptive definitions only. No logic, scoring, thresholds, or decision rules are included.",
+  "mistakes": [
+    {
+      "mistake_id": "M1",
+      "mistake_name": "Impulse Guessing under Time Pressure",
+
+      "category": "Decision Timing Failure",
+
+      "core_definition": "Answering a question before deliberate reasoning begins, driven by perceived time pressure, anxiety, or urgency rather than logical evaluation.",
+
+      "cognitive_failure": {
+        "what_failed": "Reasoning initiation",
+        "failure_mode": "Logic never started; the decision was made impulsively",
+        "not_a_failure_of": [
+          "Conceptual understanding",
+          "Formula knowledge",
+          "Computation ability"
+        ]
+      },
+
+      "recognition_signals": {
+        "internal_signals": [
+          "Felt I had no time to think",
+          "Selected an option immediately after reading",
+          "Did not consciously eliminate options",
+          "Chose what looked familiar or intuitive"
+        ],
+        "behavioral_signals": [
+          "Very short answer time relative to question difficulty",
+          "No rough work or recalled reasoning steps",
+          "Heightened anxiety at the moment of selection"
+        ]
+      },
+
+      "common_triggers": [
+        "Long or intimidating question statement",
+        "Awareness of low remaining exam time",
+        "Previous questions consuming excessive time",
+        "Fear of leaving the question unattempted"
+      ],
+
+      "distinguishing_notes": {
+        "vs_M2_overthinking": "In M1, reasoning never starts; in M2, reasoning starts but later derails",
+        "vs_M3_partial_knowledge": "In M1, knowledge may exist but is not accessed",
+        "vs_M4_careless_error": "In M1, the error occurs before execution, not during it"
+      },
+
+      "example_scenario": {
+        "context": "Timed competitive exam MCQ",
+        "description": "The student skims the question, panics about time, and selects an option that 'looks right' without performing any structured analysis.",
+        "felt_confidence_at_selection": "Moderate to high",
+        "actual_reasoning_used": "None"
+      },
+
+      "corrective_guidance": {
+        "primary_fix": "Enforce a minimum reasoning pause before selecting any option",
+        "practical_methods": [
+          "Mandatory 10–15 second pause before choosing an answer",
+          "Mentally restate the question: 'What is being asked?'",
+          "Skip the question immediately if panic appears instead of guessing"
+        ],
+        "training_focus": [
+          "Timed practice with enforced reasoning checkpoints",
+          "Reducing fear associated with leaving questions unattempted"
+        ]
+      },
+
+      "misclassification_risk": {
+        "can_be_confused_with": ["M2", "M4"],
+        "resolution_rule": "If no logical steps can be recalled at all, classify as M1"
+      }
+    },
+    
+
+
+
+
+
+    {
+  "mistake_id": "M2",
+  "mistake_name": "Familiarity Trap",
+
+  "category": "Shallow Reasoning Failure",
+
+  "core_definition": "Choosing an answer primarily because the question, pattern, or keywords feel familiar, without fully verifying all conditions or constraints involved in the problem.",
+
+  "cognitive_failure": {
+    "what_failed": "Depth of reasoning",
+    "failure_mode": "Recognition of familiar patterns replaces full logical verification",
+    "not_a_failure_of": [
+      "Exposure to similar problems",
+      "Memory recall",
+      "Basic conceptual awareness"
+    ]
+  },
+
+  "recognition_signals": {
+    "internal_signals": [
+      "This looks like a standard question",
+      "I have seen this type before",
+      "The answer felt obvious immediately",
+      "Did not feel the need to re-check conditions"
+    ],
+    "behavioral_signals": [
+      "Quick answer selection after recognizing keywords",
+      "Skipping condition-by-condition verification",
+      "Minimal or no re-reading of the question"
+    ]
+  },
+
+  "common_triggers": [
+    "Repeated practice of similar-looking problems",
+    "Strong association with a memorized formula or pattern",
+    "Keyword-based recognition (e.g., specific terms or structures)",
+    "Fatigue leading to reliance on shortcuts"
+  ],
+
+  "distinguishing_notes": {
+    "vs_M1_impulse_guessing": "In M2, a familiar pattern triggers a decision; in M1, panic or urgency triggers a guess",
+    "vs_M3_illusion_of_competence": "In M2, reasoning is shallow; in M3, reasoning is deep but flawed",
+    "vs_M4_elimination_failure": "In M2, validation never happens; in M4, partial strategy is misapplied"
+  },
+
+  "example_scenario": {
+    "context": "Competitive exam MCQ with a commonly practiced pattern",
+    "description": "The student recognizes the question type from practice, recalls a known result, and selects the corresponding option without checking whether all given conditions match the familiar case.",
+    "felt_confidence_at_selection": "High",
+    "actual_reasoning_used": "Pattern recognition with incomplete verification"
+  },
+
+  "corrective_guidance": {
+    "primary_fix": "Force explicit verification of all conditions even for familiar-looking problems",
+    "practical_methods": [
+      "Actively list given constraints before applying a known pattern",
+      "Ask: ‘What is different here compared to the standard case?’",
+      "Delay answer selection until every condition is checked"
+    ],
+    "training_focus": [
+      "Practice variants that look familiar but contain subtle differences",
+      "Condition-by-condition validation drills"
+    ]
+  },
+
+  "misclassification_risk": {
+    "can_be_confused_with": ["M3", "M4"],
+    "resolution_rule": "If the decision was driven mainly by familiarity rather than validated logic, classify as M2"
+  }
+},
+
+
+
+
+
+{
+  "mistake_id": "M3",
+  "mistake_name": "Illusion of Competence",
+
+  "category": "Flawed Reasoning Failure",
+
+  "core_definition": "Arriving at an answer through reasoning that feels complete and convincing, but is built on incorrect assumptions, hidden gaps, or invalid logical steps.",
+
+  "cognitive_failure": {
+    "what_failed": "Logical correctness",
+    "failure_mode": "Reasoning proceeds confidently despite containing an undetected logical flaw",
+    "not_a_failure_of": [
+      "Effort",
+      "Engagement with the problem",
+      "Confidence level at the moment of solving"
+    ]
+  },
+
+  "recognition_signals": {
+    "internal_signals": [
+      "The solution felt airtight at the time",
+      "No doubt while selecting the answer",
+      "Strong confidence even after submission",
+      "Surprise on discovering the answer was wrong"
+    ],
+    "behavioral_signals": [
+      "Clear multi-step reasoning that later proves incorrect",
+      "No rechecking of assumptions",
+      "Skipping edge-case or boundary verification"
+    ]
+  },
+
+  "common_triggers": [
+    "Overgeneralizing a known concept or theorem",
+    "Assuming unstated conditions are true",
+    "Ignoring special cases or constraints",
+    "Complex problems where errors are hard to notice"
+  ],
+
+  "distinguishing_notes": {
+    "vs_M2_familiarity_trap": "In M3, reasoning is actively performed but flawed; in M2, reasoning is shallow or bypassed",
+    "vs_M4_elimination_failure": "In M3, the chosen option is justified by faulty logic; in M4, the option is insufficiently validated",
+    "vs_M7_mechanical_misuse": "In M3, the logic is wrong; in M7, the logic is right but execution is wrong"
+  },
+
+  "example_scenario": {
+    "context": "Multi-step analytical problem",
+    "description": "The student constructs a detailed solution path, confidently derives a result, and selects the answer, unaware that an early assumption or logical step was invalid.",
+    "felt_confidence_at_selection": "Very high",
+    "actual_reasoning_used": "Structured but logically incorrect reasoning"
+  },
+
+  "corrective_guidance": {
+    "primary_fix": "Make assumptions explicit and validate them before committing to an answer",
+    "practical_methods": [
+      "Write or mentally state all assumptions used",
+      "Ask: ‘Where could this logic fail?’",
+      "Check boundary cases or counterexamples"
+    ],
+    "training_focus": [
+      "Assumption-checking drills",
+      "Post-solution verification using alternative approaches"
+    ]
+  },
+
+  "misclassification_risk": {
+    "can_be_confused_with": ["M2", "M7"],
+    "resolution_rule": "If the reasoning was confident and detailed but logically incorrect, classify as M3"
+  }
+},
+
+
+
+
+
+{
+  "mistake_id": "M4",
+  "mistake_name": "Elimination Failure",
+
+  "category": "Strategy Misuse Failure",
+
+  "core_definition": "Mistaking partial elimination of incorrect options for full validation of the remaining option, without independently verifying that the chosen answer is correct.",
+
+  "cognitive_failure": {
+    "what_failed": "Validation strategy",
+    "failure_mode": "Elimination is used as proof rather than as a filtering step",
+    "not_a_failure_of": [
+      "Awareness of multiple options",
+      "Use of elimination as a tool",
+      "Basic conceptual familiarity"
+    ]
+  },
+
+  "recognition_signals": {
+    "internal_signals": [
+      "This is the only option left",
+      "Other options seem clearly wrong",
+      "Did not feel the need to check the final option",
+      "Relief after eliminating two or three choices"
+    ],
+    "behavioral_signals": [
+      "Stopping analysis once options are reduced",
+      "No direct validation of the selected option",
+      "Reasoning focused more on why others are wrong than why one is right"
+    ]
+  },
+
+  "common_triggers": [
+    "Time pressure leading to shortcut strategies",
+    "Questions with many obviously wrong options",
+    "Over-reliance on elimination in MCQs",
+    "Fatigue reducing willingness to fully verify"
+  ],
+
+  "distinguishing_notes": {
+    "vs_M2_familiarity_trap": "In M4, elimination is actively used but misapplied; in M2, familiarity drives the choice",
+    "vs_M3_illusion_of_competence": "In M4, the chosen option is insufficiently checked; in M3, it is justified by flawed logic",
+    "vs_M5_misreading_error": "In M4, the question is understood; the failure is strategic, not interpretational"
+  },
+
+  "example_scenario": {
+    "context": "MCQ with four options, two clearly incorrect",
+    "description": "The student confidently eliminates two options, hesitates between the remaining ones, then selects one simply because the other seems less plausible, without verifying correctness.",
+    "felt_confidence_at_selection": "Moderate",
+    "actual_reasoning_used": "Elimination without final validation"
+  },
+
+  "corrective_guidance": {
+    "primary_fix": "Treat elimination as a filtering step, not as proof of correctness",
+    "practical_methods": [
+      "Explicitly justify the remaining option as if it were the only option",
+      "Ask: ‘Why is this option correct?’ not just ‘Why are others wrong?’",
+      "Perform a final correctness check even after elimination"
+    ],
+    "training_focus": [
+      "Practice MCQs requiring positive validation of the final option",
+      "Awareness drills separating elimination from confirmation"
+    ]
+  },
+
+  "misclassification_risk": {
+    "can_be_confused_with": ["M2", "M3"],
+    "resolution_rule": "If the final option was chosen mainly because others were eliminated, classify as M4"
+  }
+},
+
+
+
+
+
+{
+  "mistake_id": "M5",
+  "mistake_name": "Misreading Error",
+
+  "category": "Interpretation Failure",
+
+  "core_definition": "Answering a question based on an incorrect understanding of the problem statement, constraints, or keywords, despite having the required knowledge to solve it correctly.",
+
+  "cognitive_failure": {
+    "what_failed": "Problem interpretation",
+    "failure_mode": "The question is mentally represented incorrectly before reasoning begins",
+    "not_a_failure_of": [
+      "Conceptual knowledge",
+      "Problem-solving ability",
+      "Logical reasoning skill"
+    ]
+  },
+
+  "recognition_signals": {
+    "internal_signals": [
+      "Realized later that I read the question wrongly",
+      "Missed or inverted a key word",
+      "Assumed something that was explicitly stated otherwise",
+      "Solved a different question than the one asked"
+    ],
+    "behavioral_signals": [
+      "Skipping careful re-reading of the problem",
+      "Ignoring constraints or edge conditions",
+      "Focusing on familiar parts of the question while missing qualifiers"
+    ]
+  },
+
+  "common_triggers": [
+    "Long or densely worded problem statements",
+    "Negatively phrased questions (e.g., 'NOT', 'EXCEPT')",
+    "Time pressure causing rushed reading",
+    "Fatigue reducing attention to detail"
+  ],
+
+  "distinguishing_notes": {
+    "vs_M1_impulse_guessing": "In M5, the student reasons on a misread question; in M1, reasoning does not begin",
+    "vs_M4_elimination_failure": "In M5, the interpretation is wrong; in M4, the strategy is misapplied",
+    "vs_M7_mechanical_misuse": "In M5, the mistake occurs before execution; in M7, it occurs during execution"
+  },
+
+  "example_scenario": {
+    "context": "Conceptual or constraint-heavy exam question",
+    "description": "The student correctly solves a version of the problem they believe was asked, later realizing that a key constraint or condition was misunderstood or overlooked.",
+    "felt_confidence_at_selection": "High",
+    "actual_reasoning_used": "Correct reasoning applied to an incorrect interpretation"
+  },
+
+  "corrective_guidance": {
+    "primary_fix": "Ensure accurate mental representation of the question before solving",
+    "practical_methods": [
+      "Restate the question in your own words",
+      "Underline or mentally mark key constraints and qualifiers",
+      "Re-read the question once before final submission"
+    ],
+    "training_focus": [
+      "Practice with intentionally tricky wording",
+      "Reading-comprehension drills under time constraints"
+    ]
+  },
+
+  "misclassification_risk": {
+    "can_be_confused_with": ["M4", "M7"],
+    "resolution_rule": "If the reasoning was correct but applied to a misinterpreted question, classify as M5"
+  }
+},
+
+
+
+
+{
+  "mistake_id": "M6",
+  "mistake_name": "Overthinking",
+
+  "category": "Confidence Stability Failure",
+
+  "core_definition": "Changing a correct answer due to doubt or fear, without identifying any concrete contradiction or error in the original reasoning.",
+
+  "cognitive_failure": {
+    "what_failed": "Confidence calibration",
+    "failure_mode": "Correct reasoning is abandoned despite remaining logically sound",
+    "not_a_failure_of": [
+      "Conceptual understanding",
+      "Analytical ability",
+      "Initial reasoning quality"
+    ]
+  },
+
+  "recognition_signals": {
+    "internal_signals": [
+      "I had the correct answer but doubted it",
+      "Felt the question was trying to trick me",
+      "Changed the answer without finding a real mistake",
+      "Second-guessed myself at the last moment"
+    ],
+    "behavioral_signals": [
+      "Late answer change after completing reasoning",
+      "Extended time spent re-evaluating without new insight",
+      "Multiple internal reversals between options"
+    ]
+  },
+
+  "common_triggers": [
+    "High-stakes exam pressure",
+    "Past experiences with tricky or deceptive questions",
+    "Low self-trust despite correct preparation",
+    "Perception that the problem is ‘too easy’"
+  ],
+
+  "distinguishing_notes": {
+    "vs_M3_illusion_of_competence": "In M6, the original reasoning is correct; in M3, the reasoning itself is flawed",
+    "vs_M1_impulse_guessing": "In M6, reasoning is completed; in M1, reasoning never begins",
+    "vs_M4_elimination_failure": "In M6, validation existed and was correct; the failure is post-validation"
+  },
+
+  "example_scenario": {
+    "context": "Direct application or well-practiced problem",
+    "description": "The student solves the problem correctly, arrives at the right answer, then changes it after doubting the simplicity of the solution despite finding no contradiction.",
+    "felt_confidence_at_selection": "Low to moderate",
+    "actual_reasoning_used": "Correct reasoning overridden by doubt"
+  },
+
+  "corrective_guidance": {
+    "primary_fix": "Require a concrete logical contradiction before changing an answer",
+    "practical_methods": [
+      "Ask: ‘What exact step is wrong?’ before revising",
+      "Lock the answer once verified",
+      "Move on immediately after validation"
+    ],
+    "training_focus": [
+      "Trust-building through post-test review",
+      "Exposure to straightforward problems in high-pressure settings"
+    ]
+  },
+
+  "misclassification_risk": {
+    "can_be_confused_with": ["M3"],
+    "resolution_rule": "If the initial reasoning was correct and the answer was changed due to doubt alone, classify as M6"
+  }
+},
+
+
+
+
+
+{
+  "mistake_id": "M7",
+  "mistake_name": "Mechanical Misuse",
+
+  "category": "Execution Error",
+
+  "core_definition": "Reaching toward the correct solution approach or idea, but producing a wrong answer due to an execution slip such as calculation error, incorrect substitution, sign mistake, or procedural oversight.",
+
+  "cognitive_failure": {
+    "what_failed": "Execution accuracy",
+    "failure_mode": "Correct logic is present, but implementation contains a mechanical slip",
+    "not_a_failure_of": [
+      "Conceptual understanding",
+      "Problem interpretation",
+      "Choice of solution strategy"
+    ]
+  },
+
+  "recognition_signals": {
+    "internal_signals": [
+      "I knew how to solve it",
+      "The mistake was small or silly",
+      "Everything felt right except the final result",
+      "I noticed the error immediately during review"
+    ],
+    "behavioral_signals": [
+      "Near-correct intermediate steps",
+      "Minor arithmetic, algebraic, or procedural slip",
+      "Correct method written but wrong final answer"
+    ]
+  },
+
+  "common_triggers": [
+    "Time pressure during calculations",
+    "Mental fatigue reducing attention to detail",
+    "Skipping intermediate checks",
+    "Rushing after finding the right approach"
+  ],
+
+  "distinguishing_notes": {
+    "vs_M3_illusion_of_competence": "In M7, the logic is correct but execution fails; in M3, the logic itself is flawed",
+    "vs_M5_misreading_error": "In M7, the question is understood correctly; the failure occurs after interpretation",
+    "vs_M6_overthinking": "In M7, the answer is not changed due to doubt but becomes wrong due to execution"
+  },
+
+  "example_scenario": {
+    "context": "Numerical or multi-step procedural problem",
+    "description": "The student applies the correct formula and steps but makes a small arithmetic or sign error, leading to an incorrect final option.",
+    "felt_confidence_at_selection": "High",
+    "actual_reasoning_used": "Correct reasoning with faulty execution"
+  },
+
+  "corrective_guidance": {
+    "primary_fix": "Introduce a deliberate execution verification step before finalizing the answer",
+    "practical_methods": [
+      "Recheck critical calculations or substitutions",
+      "Perform a quick sanity or magnitude check",
+      "Slow down intentionally during final steps"
+    ],
+    "training_focus": [
+      "Accuracy-focused timed practice",
+      "Habitual final-step verification routines"
+    ]
+  },
+
+  "misclassification_risk": {
+    "can_be_confused_with": ["M3", "M5"],
+    "resolution_rule": "If the approach was correct but the final result is wrong due to a small slip, classify as M7"
+  }
+},
+
+
+
+
+
+{
+  "mistake_id": "M8",
+  "mistake_name": "Personal Pattern",
+
+  "category": "Habitual Error",
+
+  "core_definition": "A recurring, individual-specific mistake pattern that appears repeatedly across different questions, regardless of topic, due to ingrained habits or behavioral tendencies.",
+
+  "cognitive_failure": {
+    "what_failed": "Self-monitoring and habit regulation",
+    "failure_mode": "The same type of mistake is repeated automatically without conscious intervention",
+    "not_a_failure_of": [
+      "Subject knowledge",
+      "Isolated reasoning ability",
+      "Understanding of individual questions"
+    ]
+  },
+
+  "recognition_signals": {
+    "internal_signals": [
+      "I keep making this same kind of mistake",
+      "I recognize it only after it happens",
+      "This error feels characteristic of me",
+      "I know this is a weak pattern of mine"
+    ],
+    "behavioral_signals": [
+      "Same mistake type appearing across multiple tests",
+      "Errors recurring across unrelated topics",
+      "Consistent error style visible in analysis logs"
+    ]
+  },
+
+  "common_triggers": [
+    "Unchallenged habits formed over time",
+    "Lack of structured post-test reflection",
+    "Overconfidence or underconfidence tendencies",
+    "Absence of personalized corrective rules"
+  ],
+
+  "distinguishing_notes": {
+    "vs_M1_to_M7": "M8 is defined by repetition over time, not by a single-question failure",
+    "vs_M7_mechanical_misuse": "In M8, the same execution error recurs consistently",
+    "vs_M6_overthinking": "In M8, overthinking becomes a habitual behavior rather than an isolated event"
+  },
+
+  "example_scenario": {
+    "context": "Multiple exams or practice sessions",
+    "description": "Across many tests, the student repeatedly loses marks due to the same type of error, such as misreading conditions or rushing final steps, despite being aware of the issue.",
+    "felt_confidence_at_selection": "Varies",
+    "actual_reasoning_used": "Depends on the underlying repeated mistake"
+  },
+
+  "corrective_guidance": {
+    "primary_fix": "Convert awareness of the pattern into explicit personal rules",
+    "practical_methods": [
+      "Maintain a personal mistake log",
+      "Create one-line rules targeting recurring errors",
+      "Review personal patterns before each test"
+    ],
+    "training_focus": [
+      "Longitudinal mistake tracking",
+      "Habit-breaking interventions rather than topic practice"
+    ]
+  },
+
+  "misclassification_risk": {
+    "can_be_confused_with": ["M1", "M6", "M7"],
+    "resolution_rule": "If the same mistake repeats across time and contexts, classify as M8"
+  }
+}
+
+  ]
+}

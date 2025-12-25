@@ -1,0 +1,26 @@
+{
+  "question_id": "string",
+  "subject": "OS | DBMS | CN | TOC | COA | DS | Algo",
+
+  "attempt_number": 1,
+
+  "time_taken_sec": 0,
+  "avg_time_sec": 0,
+
+  "selected_option": "A | B | C | D",
+  "correct_option": "A | B | C | D",
+
+  "confidence": 0.0,
+  "confidence_after_answer": 0.0,
+
+  "option_elimination": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+
+  "changed_answer": false,
+  "guessed": false,
+  "marked_for_review": false
+}

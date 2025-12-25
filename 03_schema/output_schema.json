@@ -1,0 +1,29 @@
+{
+  "status": "success",
+
+  "is_correct": false,
+
+  "dominant_mistake": {
+    "code": "M4",
+    "name": "Elimination Failure",
+    "confidence_score": 0.0
+  },
+
+  "secondary_mistakes": [
+    {
+      "code": "M2",
+      "name": "Familiarity Trap",
+      "confidence_score": 0.0
+    }
+  ],
+
+  "explanation": "string",
+
+  "corrective_action": "string",
+
+  "error": {
+    "type": "MissingField | InvalidValue | InvalidEnum | SchemaViolation",
+    "field": "string",
+    "message": "string"
+  }
+}
